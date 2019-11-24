@@ -19,4 +19,4 @@ Removes all Restrict Content Pro shortcodes from WordPress standard post types.
 
 ## Last Updated
 
-* 23 November 2019
+* 24 November 2019
