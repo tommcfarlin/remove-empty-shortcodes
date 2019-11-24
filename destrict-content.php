@@ -24,8 +24,26 @@
 
 namespace DestrictContent;
 
+use DestrictContent\Utilities\Registry;
+use DestrictContent\Subscriber\PostContentProcessorSubscriber;
+
 // This file called directly.
 defined('WPINC') || die;
 
 // Include the Composer autoloader.
 require_once __DIR__ . '/vendor/autoload.php';
+
+// Setup a filter so we can retrieve the registry throughout the plugin.
+$registry = new Registry();
+add_filter('destrictContentRegistry', function () use ($registry) {
+    return $registry;
+});
+
+// Add Subscribers.
+$registry->add(
+    'postContentProcessorSubscriber',
+    new PostContentProcessorSubscriber('the_content')
+);
+
+// Start the machine.
+(new Plugin($registry))->start();
