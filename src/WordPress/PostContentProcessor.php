@@ -18,41 +18,27 @@ namespace DestrictContent\WordPress;
 class PostContentProcessor
 {
     /**
+     * A reference to the Shortcode Manager for processing orphaned shortcodes.
+     */
+    private $shortcodeManager;
+
+    /**
+     * Initializes the class by setting up a reference to the Registry and the
+     * Shortcode Manager.
+     */
+    public function __construct()
+    {
+        $registry = apply_filters('destrictContentRegistry', null);
+        $this->shortcodeManager = $registry->get('shortcodeManager');
+    }
+
+    /**
      * @param string $content the filtered post content
      *
      * @return string $content the filtered post content without the shortcode
      */
-    public function run($content)
+    public function run(string $content): string
     {
-        if (!$this->hasRestrictContentProShortcode()) {
-            return $content;
-        }
-
-        add_shortcode('restrict', '__return_false');
-
-        return $content;
-    }
-
-    /**
-     * Determines if there is a Restrict Content Pro shortcode in the content.
-     *
-     * @return bool true if a shortcode is found, false; otherwise
-     */
-    private function hasRestrictContentProShortcode(): bool
-    {
-        global $post;
-
-        // Look for all of the shortocdes in the post content.
-        preg_match_all('/\[(.*?)\]/', $post->post_content, $matches);
-        $matches = $matches[0];
-
-        // If 'restrict' is not found in the matches array, then return false immediately.
-        foreach ($matches as $match) {
-            if (false === strpos($match, 'restrict')) {
-                return false;
-            }
-        }
-
-        return true;
+        return $this->shortcodeManager->processShortcodes($content);
     }
 }

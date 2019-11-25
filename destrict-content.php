@@ -15,7 +15,7 @@
  * Plugin Name:       Destrict Content
  * Plugin URI:        https://github.com/tommcfarlin/destrict-content/
  * Description:       Removes Restrict Content Pro shortcodes from standard posts.
- * Version:           0.1.0
+ * Version:           0.2.0
  * Author:            Tom McFarlin
  * Author URI:        https://tommcfarlin.com
  * License:           GPL-3.0+
@@ -25,6 +25,7 @@
 namespace DestrictContent;
 
 use DestrictContent\Utilities\Registry;
+use DestrictContent\Utilities\ShortcodeManager;
 use DestrictContent\Subscriber\PostContentProcessorSubscriber;
 
 // This file called directly.
@@ -38,6 +39,12 @@ $registry = new Registry();
 add_filter('destrictContentRegistry', function () use ($registry) {
     return $registry;
 });
+
+// Add Utilities.
+$registry->add(
+    'shortcodeManager',
+    new ShortcodeManager()
+);
 
 // Add Subscribers.
 $registry->add(
