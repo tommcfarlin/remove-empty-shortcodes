@@ -34,6 +34,10 @@ class PostContentProcessorSubscriber extends AbstractSubscriber
      */
     public function load()
     {
+        if (is_admin()) {
+            return;
+        }
+
         if (!isset(\func_get_args()[0])) {
             return;
         }
