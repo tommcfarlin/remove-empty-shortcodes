@@ -45,8 +45,8 @@ class ShortcodeManager
     public function processShortcodes(string $content)
     {
         return ($this->hasActiveShortcodes()) ?
-            $this->removeShortcodes($content) :
-            $this->keepActiveShortcodes($content);
+            $this->keepActiveShortcodes($content) :
+            $this->removeShortcodes($content);
     }
 
     /**
