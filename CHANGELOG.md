@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [0.3.0] - 2019-11-29
 
+### Add
+
+* Add functionality specifically for the standard post type
+
 ### Updated
 
 * Update the plugin to focus on all shortcodes (rather than just one)
