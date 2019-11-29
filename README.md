@@ -5,7 +5,7 @@
 If you've ever installed a plugin then used the plugin for an extended amount of time,
 then much of your contet likely includes that shortcode.
 
-If you opt to disable that plugin and it doesn't properly clean up after itself, then much of your content is going to include shortcodes that don't mean anything to your readers.
+If you opt to disable that plugin and it doesn't properly clean up after itself, then much of your contennt is going to include shortcodes that don't mean anything to your readers.
 
 This plugin removes the shortcode from what both users and search engines see. As of `0.3.0`, it does not remove the information from the database so if you ever reinstall the plugin, then the shortcode functionality will continue to work.
 
