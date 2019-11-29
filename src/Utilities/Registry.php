@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of Destrict Content.
+ * This file is part of Remove Empty Shortcodes.
  *
  * (c) Tom McFarlin <tom@tommcfarlin.com>
  *
@@ -9,10 +9,10 @@
  * with this source code in the file LICENSE.
  */
 
-namespace DestrictContent\Utilities;
+namespace RESC\Utilities;
 
-use DestrictContent\Subscriber\AbstractSubscriber;
 use Exception;
+use RESC\Subscriber\AbstractSubscriber;
 
 /**
  * This class services as a simple container that can be used to pass objects

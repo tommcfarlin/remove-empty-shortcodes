@@ -1,7 +1,7 @@
 <?php
 
 $header = <<<'EOF'
-This file is part of Destrict Content.
+This file is part of Remove Empty Shortcodes.
 
 (c) Tom McFarlin <tom@tommcfarlin.com>
 

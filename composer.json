@@ -1,9 +1,9 @@
 {
-	"name": "tommcfarlin/destrict-content",
-	"description": "Removes Restrict Content Pro shortcodes from standard posts.",
+	"name": "tommcfarlin/remove-empty-shortcodes",
+	"description": "Removes shortcodes from standard posts.",
 	"type": "wordpress-plugin",
 	"license": "GPL-3.0-or-later",
-	"homepage": "https://github.com/tommcfarlin/destrict-content/issues",
+	"homepage": "https://github.com/tommcfarlin/remove-empty-shortcodes/issues",
 	"authors": [
 		{
 			"name": "Tom McFarlin",
@@ -12,7 +12,7 @@
 		}
 	],
 	"support": {
-		"issues": "https://github.com/tommcfarlin/destrict-content/issues"
+		"issues": "https://github.com/tommcfarlin/remove-empty-shortcodes/issues"
 	},
 	"config": {
 		"preferred-install": "dist",
@@ -40,7 +40,7 @@
 	},
 	"autoload": {
 		"psr-4": {
-			"DestrictContent\\": "src/"
+			"RESC\\": "src/"
 		}
 	},
 	"minimum-stability": "stable"

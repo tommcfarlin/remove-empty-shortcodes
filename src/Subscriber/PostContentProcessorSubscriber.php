@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of Destrict Content.
+ * This file is part of Remove Empty Shortcodes.
  *
  * (c) Tom McFarlin <tom@tommcfarlin.com>
  *
@@ -9,9 +9,9 @@
  * with this source code in the file LICENSE.
  */
 
-namespace DestrictContent\Subscriber;
+namespace RESC\Subscriber;
 
-use DestrictContent\WordPress\PostContentProcessor;
+use RESC\WordPress\PostContentProcessor;
 
 /**
  * Initialises.
@@ -27,10 +27,9 @@ class PostContentProcessorSubscriber extends AbstractSubscriber
     }
 
     /**
-     * Initializes and loads the object responsible for filtering out Restrict Content
-     * shortcodes.
+     * Initializes and loads the object responsible for filtering empty shortcodes.
      *
-     * @return mixed either nothing or the processed content without the RCP shortcode
+     * @return mixed either nothing or the processed content without the shortcode
      */
     public function load()
     {
@@ -39,6 +38,10 @@ class PostContentProcessorSubscriber extends AbstractSubscriber
         }
 
         if (!isset(\func_get_args()[0])) {
+            return;
+        }
+
+        if ('post' !== get_post_type()) {
             return;
         }
 

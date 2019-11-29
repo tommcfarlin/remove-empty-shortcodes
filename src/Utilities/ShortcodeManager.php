@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of Destrict Content.
+ * This file is part of Remove Empty Shortcodes.
  *
  * (c) Tom McFarlin <tom@tommcfarlin.com>
  *
@@ -9,7 +9,7 @@
  * with this source code in the file LICENSE.
  */
 
-namespace DestrictContent\Utilities;
+namespace RESC\Utilities;
 
 /**
  * Processes incoming content looking for incoming shortcodes to make sure that
@@ -45,8 +45,8 @@ class ShortcodeManager
     public function processShortcodes(string $content)
     {
         return ($this->hasActiveShortcodes()) ?
-            $this->removeShortcodes($content) :
-            $this->keepActiveShortcodes($content);
+            $this->keepActiveShortcodes($content) :
+            $this->removeShortcodes($content);
     }
 
     /**

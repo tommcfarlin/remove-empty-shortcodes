@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of Destrict Content.
+ * This file is part of Remove Empty Shortcodes.
  *
  * (c) Tom McFarlin <tom@tommcfarlin.com>
  *
@@ -9,9 +9,9 @@
  * with this source code in the file LICENSE.
  */
 
-namespace DestrictContent;
+namespace RESC;
 
-use DestrictContent\Utilities\Registry;
+use RESC\Utilities\Registry;
 
 /**
  * The base class for this plugin. Maintains a copy of the registry and starts
