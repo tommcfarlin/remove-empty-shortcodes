@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of Destrict Content.
+ * This file is part of Remove Empty Shortcodes.
  *
  * (c) Tom McFarlin <tom@tommcfarlin.com>
  *
@@ -9,10 +9,10 @@
  * with this source code in the file LICENSE.
  */
 
-namespace DestrictContent\WordPress;
+namespace RESC\WordPress;
 
 /**
- * Processes the post content by looking to see if the Restrict Content Pro shortcode
+ * Processes the post content by looking to see if any orphaned shortcode
  * exists and then removes it from displaying it from the user.
  */
 class PostContentProcessor
@@ -28,7 +28,7 @@ class PostContentProcessor
      */
     public function __construct()
     {
-        $registry = apply_filters('destrictContentRegistry', null);
+        $registry = apply_filters('rescRegistry', null);
         $this->shortcodeManager = $registry->get('shortcodeManager');
     }
 

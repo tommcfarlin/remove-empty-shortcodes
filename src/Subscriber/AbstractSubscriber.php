@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of Destrict Content.
+ * This file is part of Remove Empty Shortcodes.
  *
  * (c) Tom McFarlin <tom@tommcfarlin.com>
  *
@@ -9,9 +9,9 @@
  * with this source code in the file LICENSE.
  */
 
-namespace DestrictContent\Subscriber;
+namespace RESC\Subscriber;
 
-use DestrictContent\Utilities\Registry;
+use RESC\Utilities\Registry;
 
 /**
  * An abstract implementation of a subscriber that requires a hook and the ability to
@@ -35,7 +35,7 @@ abstract class AbstractSubscriber
     public function __construct(string $hook)
     {
         $this->hook = $hook;
-        $this->registry = apply_filters('destrictContentRegistry', null);
+        $this->registry = apply_filters('rescRegistry', null);
     }
 
     /**
