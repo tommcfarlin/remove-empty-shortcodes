@@ -41,6 +41,10 @@ class PostContentProcessorSubscriber extends AbstractSubscriber
             return;
         }
 
+        if ('post' !== get_post_type()) {
+            return;
+        }
+
         $content = \func_get_args()[0];
 
         return (new PostContentProcessor())->run($content);
