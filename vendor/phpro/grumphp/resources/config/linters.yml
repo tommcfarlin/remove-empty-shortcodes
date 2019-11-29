@@ -1,0 +1,15 @@
+services:
+    linter.jsonlint:
+        class: GrumPHP\Linter\Json\JsonLinter
+        arguments:
+          - '@grumphp.util.filesystem'
+          - '@json.parser'
+
+    linter.xmllint:
+        class: GrumPHP\Linter\Xml\XmlLinter
+        arguments: []
+
+    linter.yamllint:
+        class: GrumPHP\Linter\Yaml\YamlLinter
+        arguments:
+          - '@grumphp.util.filesystem'

@@ -7,9 +7,9 @@ namespace Composer\Autoload;
 class ComposerStaticInitee8e783b32a964890420bf21874215ab
 {
     public static $prefixLengthsPsr4 = array (
-        'D' => 
+        'R' => 
         array (
-            'DestrictContent\\' => 16,
+            'RESC\\' => 5,
         ),
         'C' => 
         array (
@@ -18,7 +18,7 @@ class ComposerStaticInitee8e783b32a964890420bf21874215ab
     );
 
     public static $prefixDirsPsr4 = array (
-        'DestrictContent\\' => 
+        'RESC\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src',
         ),
@@ -123,11 +123,12 @@ class ComposerStaticInitee8e783b32a964890420bf21874215ab
         'Composer\\Installers\\YawikInstaller' => __DIR__ . '/..' . '/composer/installers/src/Composer/Installers/YawikInstaller.php',
         'Composer\\Installers\\ZendInstaller' => __DIR__ . '/..' . '/composer/installers/src/Composer/Installers/ZendInstaller.php',
         'Composer\\Installers\\ZikulaInstaller' => __DIR__ . '/..' . '/composer/installers/src/Composer/Installers/ZikulaInstaller.php',
-        'DestrictContent\\Plugin' => __DIR__ . '/../..' . '/src/Plugin.php',
-        'DestrictContent\\Subscriber\\AbstractSubscriber' => __DIR__ . '/../..' . '/src/Subscriber/AbstractSubscriber.php',
-        'DestrictContent\\Subscriber\\PostContentProcessorSubscriber' => __DIR__ . '/../..' . '/src/Subscriber/PostContentProcessorSubscriber.php',
-        'DestrictContent\\Utilities\\Registry' => __DIR__ . '/../..' . '/src/Utilities/Registry.php',
-        'DestrictContent\\WordPress\\PostContentProcessor' => __DIR__ . '/../..' . '/src/WordPress/PostContentProcessor.php',
+        'RESC\\Plugin' => __DIR__ . '/../..' . '/src/Plugin.php',
+        'RESC\\Subscriber\\AbstractSubscriber' => __DIR__ . '/../..' . '/src/Subscriber/AbstractSubscriber.php',
+        'RESC\\Subscriber\\PostContentProcessorSubscriber' => __DIR__ . '/../..' . '/src/Subscriber/PostContentProcessorSubscriber.php',
+        'RESC\\Utilities\\Registry' => __DIR__ . '/../..' . '/src/Utilities/Registry.php',
+        'RESC\\Utilities\\ShortcodeManager' => __DIR__ . '/../..' . '/src/Utilities/ShortcodeManager.php',
+        'RESC\\WordPress\\PostContentProcessor' => __DIR__ . '/../..' . '/src/WordPress/PostContentProcessor.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
