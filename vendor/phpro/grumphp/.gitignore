@@ -1,5 +1,0 @@
-bin
-!bin/grumphp
-vendor
-composer.lock
-grumphp.yml
