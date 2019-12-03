@@ -33,19 +33,19 @@ class PostContentProcessorSubscriber extends AbstractSubscriber
      */
     public function load()
     {
-        if (is_admin()) {
-            return;
-        }
-
+        // TODO: This should always be set but I'd like more time to set breakpoints.
         if (!isset(\func_get_args()[0])) {
             return;
         }
 
-        if ('post' !== get_post_type()) {
-            return;
+        $content = \func_get_args()[0];
+        if (is_admin()) {
+            return $content;
         }
 
-        $content = \func_get_args()[0];
+        if ('post' !== get_post_type() && 'page' !== get_post_type()) {
+            return $content;
+        }
 
         return (new PostContentProcessor())->run($content);
     }

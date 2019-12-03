@@ -15,7 +15,7 @@
  * Plugin Name:       Remove Empty Shortcodes
  * Plugin URI:        https://github.com/tommcfarlin/remove-empty-shortcodes//
  * Description:       Removes Restrict Content Pro shortcodes from standard posts.
- * Version:           0.2.0
+ * Version:           0.4.0
  * Author:            Tom McFarlin
  * Author URI:        https://tommcfarlin.com
  * License:           GPL-3.0+

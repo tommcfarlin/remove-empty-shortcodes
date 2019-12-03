@@ -17,7 +17,7 @@
 	"config": {
 		"preferred-install": "dist",
 		"platform": {
-			"php": "7.2"
+			"php": "7.3"
 		}
 	},
 	"repositories": [
@@ -27,7 +27,7 @@
 		}
 	],
 	"require": {
-		"php": "7.2",
+		"php": "7.3",
 		"composer/installers": "^1.4"
 	},
 	"require-dev": {

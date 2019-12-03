@@ -19,8 +19,8 @@ parameters:
             blacklist:
               - "exit"
               - "var_dump"
-      phpversion:
-        project: '7.2'
+      #phpversion:
+      #  project: '7.3'
     phplint: ~
     phpmd:
       exclude:
