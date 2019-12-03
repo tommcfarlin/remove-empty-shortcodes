@@ -1,0 +1,97 @@
+services:
+    async_process_runner:
+      class: GrumPHP\Process\AsyncProcessRunner
+      arguments:
+        - '@config'
+
+    config:
+        class: GrumPHP\Configuration\GrumPHP
+        arguments:
+          - '@service_container'
+
+    event_dispatcher:
+        class: Symfony\Component\EventDispatcher\ContainerAwareEventDispatcher
+        arguments:
+          - '@service_container'
+
+    filesystem:
+        alias: grumphp.util.filesystem
+
+    executable_finder:
+        class: Symfony\Component\Process\ExecutableFinder
+
+    process_builder:
+      class: GrumPHP\Process\ProcessBuilder
+      arguments:
+        - '@config'
+        - '@locator.external_command'
+        - '@grumphp.io'
+
+    git.repository:
+        class: Gitonomy\Git\Repository
+        arguments:
+          - '%git_dir%'
+          - { logger: '@grumphp.logger' }
+
+    task_runner:
+        class: GrumPHP\Runner\TaskRunner
+        arguments:
+          - '@config'
+          - '@event_dispatcher'
+
+    locator.external_command:
+        class: GrumPHP\Locator\ExternalCommand
+        arguments:
+          - '%bin_dir%'
+          - '@executable_finder'
+
+    locator.configuration_file:
+        class: GrumPHP\Locator\ConfigurationFile
+        arguments:
+          - '@filesystem'
+
+    locator.changed_files:
+        class: GrumPHP\Locator\ChangedFiles
+        arguments:
+          - '@git.repository'
+          - '@filesystem'
+
+    locator.registered_files:
+        class: GrumPHP\Locator\RegisteredFiles
+        arguments:
+          - '@git.repository'
+
+    grumphp.io:
+        alias: grumphp.io.console
+
+    grumphp.io.null:
+        class: GrumPHP\IO\NullIO
+        public: false
+
+    grumphp.io.console:
+        class: GrumPHP\IO\ConsoleIO
+        lazy: true
+        arguments:
+          - '@console.input'
+          - '@console.output'
+
+    grumphp.logger:
+        class: Monolog\Logger
+        arguments:
+          - 'GrumPHP'
+          - ['@grumphp.logger.handler.nullhandler']
+
+    grumphp.logger.handler.nullhandler:
+        class: Monolog\Handler\NullHandler
+        public: false
+
+    console.input:
+        class: Symfony\Component\Console\Input\ArgvInput
+        synthetic: true
+
+    console.output:
+        class: Symfony\Component\Console\Output\ConsoleOutput
+        synthetic: true
+
+    json.parser:
+        class: Seld\JsonLint\JsonParser
