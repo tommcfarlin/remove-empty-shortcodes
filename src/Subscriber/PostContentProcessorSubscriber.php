@@ -9,9 +9,9 @@
  * with this source code in the file LICENSE.
  */
 
-namespace RESC\Subscriber;
+namespace TomMcFarlin\RESC\Subscriber;
 
-use RESC\WordPress\PostContentProcessor;
+use TomMcFarlin\RESC\WordPress\PostContentProcessor;
 
 /**
  * Initialises.

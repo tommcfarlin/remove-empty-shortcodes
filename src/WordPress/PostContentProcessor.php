@@ -9,7 +9,7 @@
  * with this source code in the file LICENSE.
  */
 
-namespace RESC\WordPress;
+namespace TomMcFarlin\RESC\WordPress;
 
 /**
  * Processes the post content by looking to see if any orphaned shortcode

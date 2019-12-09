@@ -9,9 +9,9 @@
  * with this source code in the file LICENSE.
  */
 
-namespace RESC\Subscriber;
+namespace TomMcFarlin\RESC\Subscriber;
 
-use RESC\Utilities\Registry;
+use TomMcFarlin\Utilities\Registry;
 
 /**
  * An abstract implementation of a subscriber that requires a hook and the ability to
