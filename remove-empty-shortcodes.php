@@ -13,20 +13,20 @@
  *
  * @wordpress-plugin
  * Plugin Name:       Remove Empty Shortcodes
- * Plugin URI:        https://github.com/tommcfarlin/remove-empty-shortcodes//
+ * Plugin URI:        https://github.com/tommcfarlin/remove-empty-shortcodes/
  * Description:       Removes Restrict Content Pro shortcodes from standard posts.
- * Version:           0.4.0
+ * Version:           0.5.0
  * Author:            Tom McFarlin
  * Author URI:        https://tommcfarlin.com
  * License:           GPL-3.0+
  * License URI:       https://www.gnu.org/licenses/gpl-3.0.txt
  */
 
-namespace RESC;
+namespace TomMcFarlin\RESC;
 
-use RESC\Utilities\Registry;
-use RESC\Utilities\ShortcodeManager;
-use RESC\Subscriber\PostContentProcessorSubscriber;
+use TomMcFarlin\RESC\Utilities\Registry;
+use TomMcFarlin\Utilities\ShortcodeManager;
+use TomMcFarlin\Subscriber\PostContentProcessorSubscriber;
 
 // This file called directly.
 defined('WPINC') || die;
