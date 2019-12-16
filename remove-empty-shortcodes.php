@@ -5,7 +5,7 @@
  *
  * Removes empty shortcodes from WordPress standard post types.
  *
- * @package   RESC
+ * @package   TomMcFarlin\RESC
  * @author    Tom McFarlin <tom@tommcfarlin.com>
  * @copyright 2019 Tom McFarlin
  * @license   GPL-3.0 <https://www.gnu.org/licenses/gpl-3.0.txt>
