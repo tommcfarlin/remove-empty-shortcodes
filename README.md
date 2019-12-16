@@ -26,4 +26,4 @@ This plugin removes the shortcode from what both users and search engines see. A
 
 ## Last Updated
 
-* 3 December 2019
+* 16 December 2019
