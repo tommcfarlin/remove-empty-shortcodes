@@ -9,7 +9,7 @@
  * with this source code in the file LICENSE.
  */
 
-namespace RESC\Utilities;
+namespace TomMcFarlin\RESC\Utilities;
 
 /**
  * Processes incoming content looking for incoming shortcodes to make sure that

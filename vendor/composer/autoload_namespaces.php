@@ -6,4 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'SensioLabs\\Security' => array($vendorDir . '/sensiolabs/security-checker'),
+    'ProxyManager\\' => array($vendorDir . '/ocramius/proxy-manager/src'),
+    'PHPMD\\' => array($vendorDir . '/phpmd/phpmd/src/main/php'),
 );

@@ -9,10 +9,10 @@
  * with this source code in the file LICENSE.
  */
 
-namespace RESC\Utilities;
+namespace TomMcFarlin\RESC\Utilities;
 
 use Exception;
-use RESC\Subscriber\AbstractSubscriber;
+use TomMcFarlin\RESC\Subscriber\AbstractSubscriber;
 
 /**
  * This class services as a simple container that can be used to pass objects

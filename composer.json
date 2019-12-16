@@ -35,12 +35,13 @@
 		"friendsofphp/php-cs-fixer": "^2.16",
 		"phpro/grumphp": "^0.12.0",
 		"sensiolabs/security-checker": "^4.1",
-		"nikic/php-parser": "^3.1",
-		"phpmd/phpmd": "^2.7"
+		"nikic/php-parser": "^4.3.0",
+		"phpmd/phpmd": "^2.7",
+		"phpstan/phpstan": "^0.12"
 	},
 	"autoload": {
 		"psr-4": {
-			"RESC\\": "src/"
+			"TomMcFarlin\\RESC\\": "src/"
 		}
 	},
 	"minimum-stability": "stable"

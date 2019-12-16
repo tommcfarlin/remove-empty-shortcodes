@@ -9,9 +9,9 @@
  * with this source code in the file LICENSE.
  */
 
-namespace RESC;
+namespace TomMcFarlin\RESC;
 
-use RESC\Utilities\Registry;
+use TomMcFarlin\Utilities\Registry;
 
 /**
  * The base class for this plugin. Maintains a copy of the registry and starts
