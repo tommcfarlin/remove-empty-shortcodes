@@ -2,6 +2,30 @@
 
 All notable changes to this project will be documented in this file, in reverse chronological order by release.
 
+## 3.4.1 - 2019-12-10
+
+### Added
+
+- [#180](https://github.com/zendframework/zend-code/pull/180) adds support for PHP 7.4.
+
+### Changed
+
+- Nothing.
+
+### Deprecated
+
+- Nothing.
+
+### Removed
+
+- Nothing.
+
+### Fixed
+
+- [#179](https://github.com/zendframework/zend-code/pull/179) fixes exception message when invalid value provided in `Zend\Code\Generator\ValueGenerator`.
+
+- [#180](https://github.com/zendframework/zend-code/pull/190) fixes PHP 7.4 compatibility.
+
 ## 3.4.0 - 2019-10-06
 
 ### Added

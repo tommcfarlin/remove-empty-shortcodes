@@ -11,7 +11,7 @@
 
 namespace TomMcFarlin\RESC;
 
-use TomMcFarlin\Utilities\Registry;
+use TomMcFarlin\RESC\Utilities\Registry;
 
 /**
  * The base class for this plugin. Maintains a copy of the registry and starts

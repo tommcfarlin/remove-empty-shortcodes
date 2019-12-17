@@ -25,8 +25,8 @@
 namespace TomMcFarlin\RESC;
 
 use TomMcFarlin\RESC\Utilities\Registry;
-use TomMcFarlin\Utilities\ShortcodeManager;
-use TomMcFarlin\Subscriber\PostContentProcessorSubscriber;
+use TomMcFarlin\RESC\Utilities\ShortcodeManager;
+use TomMcFarlin\RESC\Subscriber\PostContentProcessorSubscriber;
 
 // This file called directly.
 defined('WPINC') || die;
