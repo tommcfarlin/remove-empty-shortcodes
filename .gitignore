@@ -1,3 +1,4 @@
 .vscode
+.devcontainer
 vendor
 !vendor/composer

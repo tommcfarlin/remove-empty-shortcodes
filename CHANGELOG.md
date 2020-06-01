@@ -8,11 +8,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-* Add latestl version of PHPStan to GrumPHP sniffs
+* Add latest version of PHPStan to GrumPHP sniffs
 
 ### Fix
 
-* Fix issue where page content is being stripped.
+* Fix issue where page content is being stripped
 
 ### Update
 

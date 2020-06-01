@@ -3,7 +3,7 @@
 **TL;DR:** Removes all empty shortcodes from WordPress standard post types.
 
 If you've ever installed a plugin then used the plugin for an extended amount of time,
-then much of your contet likely includes that shortcode.
+then much of your content likely includes that shortcode.
 
 If you opt to disable that plugin and it doesn't properly clean up after itself, then much of your contennt is going to include shortcodes that don't mean anything to your readers.
 
