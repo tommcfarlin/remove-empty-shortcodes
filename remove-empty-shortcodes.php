@@ -7,7 +7,7 @@
  *
  * @package   TomMcFarlin\RESC
  * @author    Tom McFarlin <tom@tommcfarlin.com>
- * @copyright 2019 Tom McFarlin
+ * @copyright 2019 - 2025 Tom McFarlin
  * @license   GPL-3.0 <https://www.gnu.org/licenses/gpl-3.0.txt>
  * @link      https://github.com/tommcfarlin/remove-empty-shortcodes/
  *
@@ -15,7 +15,7 @@
  * Plugin Name:       Remove Empty Shortcodes
  * Plugin URI:        https://github.com/tommcfarlin/remove-empty-shortcodes/
  * Description:       Removes Restrict Content Pro shortcodes from standard posts.
- * Version:           0.5.0
+ * Version:           0.6.0
  * Author:            Tom McFarlin
  * Author URI:        https://tommcfarlin.com
  * License:           GPL-3.0+
