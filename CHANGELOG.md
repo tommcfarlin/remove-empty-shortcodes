@@ -4,11 +4,32 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.6.0] - 2025-03-13
+
+### Added
+
+* Add functionality to remove empty shortcodes from post and page content without altering the database.
+
+### Fixed
+
+* Fix issue where shortcodes spanning multiple lines were not being detected and removed.
+* Fix issue where unregistered shortcodes were not being removed.
+
+### Updated
+
+* Update regex pattern to match any shortcode, not just default WordPress shortcodes.
+* Improve logging for debugging purposes (removed in final version).
+
+### Removed
+
+* Libraries installed by Composer and Composer itself to streamline the core functionality of the plugin.
+* Remove PHP Composer workflow and `composer.json` file
+
 ## [0.5.0] - 2019-12-16
 
 ### Added
 
-* Add latestl version of PHPStan to GrumPHP sniffs
+* Add latest version of PHPStan to GrumPHP sniffs
 
 ### Fix
 
