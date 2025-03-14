@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Functionality to remove empty shortcodes from posts and pages
 - Support for multi-line shortcode detection
+- Banner and icon for the WP plugin repository
 
 ### Changed
 - Updated regex pattern to match any shortcode type

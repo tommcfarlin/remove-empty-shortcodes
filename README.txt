@@ -74,6 +74,7 @@ No. The plugin works automatically once activated.
 
 = 0.6.0 =
 * Added support for multi-line shortcode detection
+* Added a banner and icon for the WP plugin repository
 * Improved handling of unregistered shortcodes
 * Updated shortcode pattern matching
 * Removed Composer dependencies
