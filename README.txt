@@ -2,7 +2,7 @@
 Contributors: tommcfarlin
 Tags: shortcodes, content, cleanup, maintenance, content management
 Requires at least: 5.0
-Tested up to: 6.4
+Tested up to: 6.7
 Stable tag: 0.6.0
 Requires PHP: 7.4
 License: GPL-3.0
