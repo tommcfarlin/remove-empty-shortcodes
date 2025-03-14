@@ -1,1 +1,51 @@
-.vscode
+# Development Tools
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Build Directory
+/build/
+/dist/
+
+# Dependency Directories
+/vendor/
+/node_modules/
+
+# OS Generated Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Logs and Databases
+*.log
+*.sql
+*.sqlite
+
+# Backup Files
+*.bak
+*.swp
+*.zip
+*~
+
+# Environment Files
+.env
+.env.*
+
+# Testing
+/coverage/
+.phpunit.result.cache
+
+# Composer
+composer.phar
+/vendor/
+
+# npm/yarn
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+.pnpm-debug.log

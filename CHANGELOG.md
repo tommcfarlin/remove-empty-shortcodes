@@ -5,83 +5,57 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [0.6.0] - 2025-03-13
-
 ### Added
+- Functionality to remove empty shortcodes from posts and pages
+- Support for multi-line shortcode detection
+- Banner and icon for the WP plugin repository
 
-* Add functionality to remove empty shortcodes from post and page content without altering the database.
-
-### Fixed
-
-* Fix issue where shortcodes spanning multiple lines were not being detected and removed.
-* Fix issue where unregistered shortcodes were not being removed.
-
-### Updated
-
-* Update regex pattern to match any shortcode, not just default WordPress shortcodes.
-* Improve logging for debugging purposes (removed in final version).
+### Changed
+- Updated regex pattern to match any shortcode type
+- Improved shortcode detection and processing
 
 ### Removed
-
-* Libraries installed by Composer and Composer itself to streamline the core functionality of the plugin.
-* Remove PHP Composer workflow and `composer.json` file
+- Composer dependencies and workflow
+- Debug logging statements from production code
 
 ## [0.5.0] - 2019-12-16
-
 ### Added
+- PHPStan integration with GrumPHP
 
-* Add latest version of PHPStan to GrumPHP sniffs
+### Changed
+- Restructured namespaces to use `TomMcFarlin` as root
 
-### Fix
-
-* Fix issue where page content is being stripped.
-
-### Update
-
-* Update namespaces to all start at the top level of `TomMcFarlin`
+### Fixed
+- Issue with page content being incorrectly stripped
 
 ## [0.4.0] - 2019-12-03
+### Added
+- Support for `page` post type
 
-### Add
-
-* Add support for standard `page` post types, too
-
-### Fix
-
-* Subscriber conditional for not responded `$content` properly
+### Fixed
+- Subscriber conditional content processing
 
 ## [0.3.0] - 2019-11-29
+### Added
+- Support for standard post type processing
+- Universal shortcode processing capability
 
-### Add
-
-* Add functionality specifically for the standard post type
-
-### Updated
-
-* Update the plugin to focus on all shortcodes (rather than just one)
-* Update Composer and code quality files for renaming the plugin
-* Updates namespace and comments
-
-## Fix
-
-* Improperly formed conditional
+### Changed
+- Refactored plugin to handle all shortcode types
+- Updated namespace structure and documentation
 
 ### Removed
-
-* Remove destrict-content bootstrap for remove-empty-shortcodes
+- Restrict Content bootstrap code
 
 ## [0.2.0] - 2019-11-24
-
 ### Added
-* Add Shortcode Manager for processing shortcodes
+- Shortcode Manager for processing shortcodes
 
-### Updated
-
-* Update version number
-* Update PostContentProcessor to use the Shortcode Manager
-* Update cache file
-* Update TODO.md
+### Changed
+- Improved content processing with Shortcode Manager
+- Updated documentation and version tracking
 
 ## [0.1.0] - 2019-11-24
-
 ### Added
-* Initial release for removing Restrict Content Pro shortcodes
+- Initial release
+- Basic Restrict Content Pro shortcode removal

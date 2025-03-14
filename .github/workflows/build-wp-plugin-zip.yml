@@ -1,0 +1,55 @@
+name: Build WordPress Plugin ZIP
+
+on:
+  push:
+    tags:
+      - '*'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set Plugin Slug
+        id: plugin
+        run: echo "PLUGIN_SLUG=$(basename \"${{ github.repository }}\")" >> $GITHUB_ENV
+      - name: Create ZIP File
+        run: |
+          mkdir -p build/${{ env.PLUGIN_SLUG }}
+          rsync -av \
+            --exclude='.git*' \
+            --exclude='.github' \
+            --exclude='node_modules' \
+            --exclude='assets' \
+            --exclude='tests' \
+            --exclude='bin' \
+            --exclude='*.md' \
+            --exclude='*.yml' \
+            --exclude='*.xml' \
+            --exclude='*.dist' \
+            --exclude='*.lock' \
+            --exclude='*.json' \
+            --exclude='*.gitignore' \
+            --exclude='*.sh' \
+            --exclude='build' \
+            . build/${{ env.PLUGIN_SLUG }}
+          cd build
+          zip -r ../${{ env.PLUGIN_SLUG }}.zip ${{ env.PLUGIN_SLUG }}
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ env.PLUGIN_SLUG }}
+          path: ${{ env.PLUGIN_SLUG }}.zip
+
+      - name: Create Release
+        uses: softprops/action-gh-release@v1
+        if: startsWith(github.ref, 'refs/tags/')
+        with:
+          files: ${{ env.PLUGIN_SLUG }}.zip
+          draft: false
+          prerelease: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
