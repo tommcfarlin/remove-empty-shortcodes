@@ -14,8 +14,7 @@ jobs:
 
       - name: Set Plugin Slug
         id: plugin
-        run: echo "PLUGIN_SLUG=$(basename ${{ github.repository }})" >> $GITHUB_ENV
-
+        run: echo "PLUGIN_SLUG=$(basename \"${{ github.repository }}\")" >> $GITHUB_ENV
       - name: Create ZIP File
         run: |
           mkdir -p build/${{ env.PLUGIN_SLUG }}
