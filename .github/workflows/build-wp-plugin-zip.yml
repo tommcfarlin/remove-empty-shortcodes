@@ -20,6 +20,7 @@ jobs:
           PLUGIN_SLUG=$(basename ${{ github.repository }})
           echo "PLUGIN_SLUG=$PLUGIN_SLUG" >> $GITHUB_ENV
 
+        run: echo "PLUGIN_SLUG=$(basename \"${{ github.repository }}\")" >> $GITHUB_ENV
       - name: Create ZIP File
         run: |
           PLUGIN_DIR="build/${PLUGIN_SLUG}"
