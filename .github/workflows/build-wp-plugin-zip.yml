@@ -1,4 +1,4 @@
-name: Build WordPress Plugin Zip
+name: Build WordPress Plugin ZIP
 
 on:
   push:
@@ -20,10 +20,9 @@ jobs:
           PLUGIN_SLUG=$(basename ${{ github.repository }})
           echo "PLUGIN_SLUG=$PLUGIN_SLUG" >> $GITHUB_ENV
 
-        run: echo "PLUGIN_SLUG=$(basename \"${{ github.repository }}\")" >> $GITHUB_ENV
       - name: Create ZIP File
         run: |
-          PLUGIN_DIR="build/${PLUGIN_SLUG}"
+          PLUGIN_DIR="${GITHUB_WORKSPACE}/build/${PLUGIN_SLUG}"
           mkdir -p "$PLUGIN_DIR"
           rsync -av \
             --exclude='.git*' \
@@ -43,7 +42,7 @@ jobs:
             --exclude='build' \
             . "$PLUGIN_DIR"
           cd build
-          zip -r "../${PLUGIN_SLUG}.zip" "${PLUGIN_SLUG}"
+          zip -r "${GITHUB_WORKSPACE}/${PLUGIN_SLUG}.zip" "${PLUGIN_SLUG}"
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
